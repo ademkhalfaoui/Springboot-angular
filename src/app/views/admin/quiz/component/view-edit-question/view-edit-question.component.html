@@ -1,0 +1,47 @@
+<div class="container-fluid">
+    <h1>Ajouter ou Modifier Questions</h1>
+    <form [formGroup]="questionForm" (ngSubmit)="submitForm()" class="mt-3">
+      <div class="form-group">
+        <label for="questionText">Texte de la Question :</label>
+        <input
+          type="text"
+          id="questionText"
+          class="form-control"
+          formControlName="questionText"
+          [class.is-invalid]="isSubmitted && questionForm.controls['questionText'].invalid"
+        />
+        <div *ngIf="isSubmitted && questionForm.controls['questionText'].invalid" class="invalid-feedback">
+          Ce champ est requis.
+        </div>
+      </div>
+  
+      <div formArrayName="reponses">
+        <div *ngFor="let response of reponses.controls; let i = index" class="form-group">
+          <label for="responses{{i}}">Réponse {{i + 1}} :</label>
+          <div class="input-group">
+            <input
+              type="text"
+              id="response{{i}}"
+              class="form-control"
+              [formControlName]="i"
+              [class.is-invalid]="isSubmitted && response.invalid"
+            />
+            <div class="input-group-append">
+              <button type="button" class="btn btn-danger" (click)="removeResponse(i)">Supprimer</button>
+            </div>
+            <div *ngIf="isSubmitted && response.invalid" class="invalid-feedback">
+              Ce champ est requis.
+            </div>
+          </div>
+        </div>
+      </div>
+  
+      <button type="button" class="btn btn-primary" (click)="addResponse()">Ajouter Réponse</button>
+      
+      <button type="submit" class="btn btn-success">Soumettre</button>
+    </form>
+    <div *ngIf="isSubmitted && questionForm.invalid" class="alert alert-danger mt-3">
+      Veuillez remplir tous les champs requis.
+    </div>
+  </div>
+  

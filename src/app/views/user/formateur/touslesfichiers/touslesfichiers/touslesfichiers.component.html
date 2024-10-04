@@ -1,0 +1,66 @@
+
+<!-- !PAGE CONTENT! -->
+<div class="w3-main" style="margin-left:340px;margin-right:40px; overflow-x: auto;">
+  
+    <div class="container-fluid">
+    
+        <h1> Bienvenue🖐️🖐️ à l'Espace dédier pour consulter cours  👨‍🎓👩‍🎓</h1>
+    <p>Priére de donner votre avis sur l'application  
+         
+    </p>
+   
+        <!-- DataTales Example -->
+        <div class="card shadow mb-4">
+           
+            <div class="card-body">
+                <button (click)="goToQuiz('/quiz')"   href="javascript:void(0)"  style="float: right;" class="btn btn-primary" >
+                    <img src="https://logowik.com/content/uploads/images/avis-red5995.jpg" alt="Description de l'image" style="width: 40px; height: 40px; border-radius: 50%; border: none; padding: 0;"/>   
+               </button>
+              
+                <div class="table-responsive">
+                    <table  class="table table-striped"  width="50%">
+                        <thead>
+                            <tr>
+                              
+                                <th>id</th>
+                                <th>Nom du fichier</th>
+                               
+                              
+                                <th>nom du cours </th>
+                                <th>nom du formateur </th>
+                                <th>Action</th>
+                             
+                            </tr>
+                        </thead>
+                       
+                    <tbody >
+                        <tr *ngFor="let item of listcours" >
+                        <th>{{item.id}}</th>
+                        <th>{{item.nom_fichier}}</th>
+                        <th>{{item.code_cours}}</th>
+                            <th>{{item.utilisateur.nom +" "+ item.utilisateur.prenom }}</th>
+                        <td>
+                           
+                        <td> <button (click)="downloadfile(item.id,item.nom_fichier)" style="float: right;" class="btn btn-primary" >
+                            <img src="https://static.vecteezy.com/ti/vecteur-libre/p3/19494271-eps10-vecteur-noir-telechargement-ligne-art-abstrait-icone-ou-logo-isole-sur-fond-blanc-symbole-de-contour-de-fleche-vers-le-bas-dans-un-style-moderne-simple-et-plat-pour-la-conception-de-votre-site-web-et-votre-application-mobile-vectoriel.jpg" alt="Description de l'image" style="width: 40px; height: 40px; border-radius: 50%; border: none; padding: 0;"/>
+                            Télecharger fichier</button></td>
+                        <td><button  class="btn btn-primary"  (click)="downloadPdf(item.id)" >
+                            <img src="https://cdn.iconscout.com/icon/premium/png-256-thumb/pdf-116-695377.png?f=webp" alt="Description de l'image" style="width: 40px; height: 40px; border-radius: 50%; border: none; padding: 0;"/>
+                            Voir le fichier
+                          </button></td>
+                          
+                    </tr>
+                 
+                       
+    
+                     
+                     
+                    </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <footer class="w3-container w3-blue w3-center w3-padding">
+            <p>© 2024 Centre National d'informatique . Tous droits réservés.</p>
+        </footer>
+    </div>

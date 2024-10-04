@@ -1,0 +1,55 @@
+<div class="w3-overlay w3-hide-large" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
+
+<!-- !PAGE CONTENT! -->
+    <div class="w3-main" style="margin-left:340px;margin-right:40px">
+     <!-- Begin Page Content -->
+ <div class="container-fluid">
+
+    <!-- Page Heading -->
+  <h1>Choix De Formation 👨‍🏫👨‍🏫</h1>
+
+<form #d="ngForm" (ngSubmit)="add(d)">
+   
+    <div class="form-group">
+        <label for="exampleInputEmail1">nom</label>
+        <input type="text" class="form-control" [(ngModel)]="participant.nom"  name="nom">
+      </div>
+      <div class="form-group">
+        <label for="exampleInputEmail1">prenom</label>
+        <input type="text" class="form-control" [(ngModel)]="participant.prenom"  name="prenom">
+      </div>
+      <div class="form-group">
+        <label for="exampleInputEmail1">numero de Cin </label>
+        <input type="number" class="form-control" [(ngModel)]="participant.num_cin"  name="num_cin">
+      </div>
+      <div class="form-group">
+        <label for="exampleInputEmail1">théme de la formation </label>
+        <select class="w3-select w3-border" name="theme_formation" class="form-control" [(ngModel)]="participant.theme_formation" required >
+          <option value="">Sélectionner un théme</option>
+          <option value="Loi de finance">Loi de finance </option>
+          <option value="Gestion de Stock">Gestion de Stock </option>
+          <option value="adab">Adab</option>
+        </select>
+      </div>
+      
+      <div class="form-group">
+        <label for="exampleInputEmail1">période</label>
+        <select class="w3-select w3-border" name="Periode" class="form-control" [(ngModel)]="participant.Periode" required >
+          <option value="">choisir la date </option>
+          <option value="du : 15/03/2024 jusqu'à: 15/05/2024">du : 15/03/2024 jusqu'à: 15/05/2024</option>
+          <option value="du : 15/01/2024 jusqu'à: 15/03/2024">du : 15/01/2024 jusqu'à: 15/03/2024</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="exampleInputEmail1">Horaire</label>
+        <select class="w3-select w3-border" name="Hoarire" class="form-control" [(ngModel)]="participant.Horaire" required >
+          <option value="">choisir l'heure </option>
+          <option value="du : 8:30   à  14:30 ">du : 8:30   à  14:30</option>
+          <option value="du : 15:00 à 18:00">du : 15:00 à 18:00</option>
+        </select>
+      </div> 
+    
+  
+     
+    <button class="btn btn-primary" style="display: flex;">valider</button>
+  </form>

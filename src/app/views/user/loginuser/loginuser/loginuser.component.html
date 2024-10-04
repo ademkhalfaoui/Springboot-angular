@@ -1,0 +1,36 @@
+<div class="w3-overlay w3-hide-large" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
+
+<!-- !PAGE CONTENT! -->
+    <div class="w3-main" style="margin-left:340px;margin-right:40px">
+     
+<!-- Contact -->
+<div class="w3-container" id="contact" style="margin-top:75px">
+    <h1 class="w3-xxxlarge w3-text-blue"><b>login</b></h1>
+    <hr style="width:50px;border:5px solid blue" class="w3-round">
+
+    <form [formGroup]="loginForm" >
+     
+      <div class="w3-section">
+        <label>Email</label>
+        <input formControlName="username" class="w3-input w3-border" type="text" name="Email" required>
+      </div>
+      <div class="w3-section">
+        <label>Mot de passe </label>
+        <input formControlName="password" class="w3-input w3-border" type="password" name="password" required>
+      </div>
+    
+      <button (click)="login()" type="submit" class="w3-button w3-block w3-padding-large w3-blue w3-margin-bottom">
+        <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="50" height="50" viewBox="0 0 48 48">
+          <circle cx="24" cy="24" r="20" fill="#ffca28"></circle>
+          <path fill="#fff" d="M25,31v-3.436C25,25.901,21.669,25,20,25s-5,0.901-5,2.564V31H25z"></path>
+          <circle cx="20" cy="20" r="3" fill="#fff"></circle>
+          <path fill="#fff" d="M33,27.56V31h-6v-3.44c0-0.93-0.36-1.69-0.92-2.3C26.78,25.09,27.47,25,28,25	C29.67,25,33,25.9,33,27.56z"></path>
+          <circle cx="28" cy="20" r="3" fill="#fff"></circle>
+        </svg>
+         s'authentifier</button>
+    </form>  
+
+  </div>
+  <footer class="w3-container w3-blue w3-center w3-padding">
+    <p>© 2024 Centre National d'informatique . Tous droits réservés.</p>
+</footer>

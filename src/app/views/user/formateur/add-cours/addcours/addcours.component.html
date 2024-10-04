@@ -1,0 +1,38 @@
+<div class="w3-overlay w3-hide-large" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
+
+<!-- !PAGE CONTENT! -->
+    <div class="w3-main" style="margin-left:340px;margin-right:40px">
+     <!-- Begin Page Content -->
+ <div class="container-fluid">
+
+    <!-- Page Heading -->
+  <h1>Cette Page est réservé pour l'ajout du Cours Aux Participants</h1>
+
+<form #v="ngForm" (ngSubmit)="add(v)">
+   
+   
+    <div class="form-group">
+        <label for="exampleInputEmail1">nom du Cours</label>
+        <input type="text" class="form-control" [(ngModel)]="cours.nom_cours"  name="nom_cours">
+    </div>
+      
+      <div class="form-group">
+        <label for="exampleInputEmail1">code du Cours</label>
+        <input type="text" class="form-control" [(ngModel)]="cours.code_cours"  name="code_cours">
+      
+      </div>
+
+      <div class="form-group">
+        <label for="exampleInputEmail1">theme de formation</label>
+        <input type="text" class="form-control" [(ngModel)]="cours.theme_formation"  name="theme_formation">
+      
+      </div>
+      <div class="form-group">
+        <label for="exampleInputEmail1">nom et prénom du  formateur</label>
+        <input type="text" class="form-control" [(ngModel)]="cours.nom_formateur"  name="nom_formateur">
+      
+      </div>
+
+     
+    <button class="btn btn-primary" >AjouterCours</button>
+  </form>

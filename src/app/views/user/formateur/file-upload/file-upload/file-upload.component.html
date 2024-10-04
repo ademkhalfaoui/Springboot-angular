@@ -1,0 +1,21 @@
+<div class="w3-overlay w3-hide-large" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
+
+<!-- !PAGE CONTENT! -->
+   <!-- !PAGE CONTENT! -->
+<div class="w3-main" style="margin-left:340px;margin-right:40px; overflow-x: auto;">
+  <div class="card-body">
+    <h1>Cette Page est dédié à l'Ajout du cours   </h1>
+      <div class="w3-container" id="contact" style="margin-top:75px">
+<form   (ngSubmit)="ajouter()">
+      
+      
+      <div class="form-group">
+        <label for="code_cours">Nom du cours:</label>
+        <input type="text" id="code_cours"  class="form-control" [(ngModel)]="codeCours" name="codeCours" required>
+      </div>
+      <div class="form-group" >
+        <label for="file">Fichier:</label>
+        <input type="file" id="file" (change)="onFileSelected($event)">
+      </div>
+      <button type="submit"  style="float: right;" class="btn btn-primary">Envoyer</button>
+    </form>

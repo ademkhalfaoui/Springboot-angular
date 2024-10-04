@@ -1,0 +1,44 @@
+ <!-- Begin Page Content -->
+ <div class="container-fluid">
+
+ 
+
+    <!-- DataTales Example -->
+    <div class="card shadow mb-4">
+
+        <div class="card-body">
+            <H1>Formateurs Disponibles  </H1>
+            <div class="table-responsive">
+                <table  class="table table-striped"  width="50%">
+                    <thead>
+                        <tr>
+                            <th>N°</th>
+                            <th>nom </th>
+                            <th>N°Cin</th>
+                          
+                             <th>Spécialité </th>
+                             <th>Adresse Email</th>
+                        </tr>
+                    </thead>
+                    
+                    <tbody >
+                        <tr *ngFor="let utilisateur of utilisateurs">
+                           <th>{{utilisateur.id}}</th>
+                           <th>{{utilisateur.nom}}</th>
+                           <th>{{utilisateur.num_cin}}</th>
+                           
+                          <th>{{utilisateur.specialite}}</th>
+                          <th>{{utilisateur.email}}</th>
+                            <th><a href="/admin/allformateurs"  (click)="deleteFormateur(utilisateur.id)" style="float: right;" class="btn btn-danger">Supprimer</a></th>
+                            <td>
+                                <a (click)="go('/admin/modifierformateur/' + utilisateur.id)" style="float: right;" class="btn btn-primary">Modifier</a>
+                              </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+</div>
+<!-- /.container-fluid -->

@@ -1,0 +1,38 @@
+<div class="container-fluid">
+    <div class="card shadow mb-4">
+      <div class="card-body">
+        <h1>Participants Inscrits</h1>
+        <div class="table-responsive">
+          <table class="table table-striped" width="50%">
+            <thead>
+              <tr>
+                <th>N°participant</th>
+                <th>Nom du participant</th>
+                <th>N°Cin</th>
+                <th>Théme de formation inscrit</th>
+                <th>Période choisie pour La Formation</th>
+                <th>Horaire choisi pour La Formation</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let utilisateur of utilisateurs">
+                <td>{{ utilisateur.id }}</td>
+                <td>{{ utilisateur.nom }}</td>
+                <td>{{ utilisateur.num_cin }}</td>
+                <td>{{ utilisateur.theme_formation }}</td>
+                <td>{{ utilisateur.Periode }}</td>
+                <td>{{ utilisateur.Horaire }}</td>
+                <td>
+                  <a (click)="deleteparticipant(utilisateur.id)" style="float: right;" class="btn btn-primary">Supprimer</a>
+                </td>
+                <td>
+                  <a (click)="go('/admin/modifierparticipant/' + utilisateur.id)" style="float: right;" class="btn btn-primary">Modifier</a>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+  

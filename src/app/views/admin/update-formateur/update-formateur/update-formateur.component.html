@@ -1,0 +1,29 @@
+<div class="container">
+    <h2>Modifier Formateur</h2>
+    <form [formGroup]="formateurForm" (ngSubmit)="onSubmit()">
+      <div class="form-group">
+        <label for="nom">Nom</label>
+        <input id="nom" class="form-control" formControlName="nom" />
+      </div>
+      <div class="form-group">
+        <label for="prenom">Prénom</label>
+        <input id="prenom" class="form-control" formControlName="prenom" />
+      </div>
+      <div class="form-group">
+        <label for="num_cin">Numéro de CIN</label>
+        <input id="num_cin" class="form-control" formControlName="num_cin" />
+      </div>
+      <div class="form-group">
+        <label for="email">Email</label>
+        <input id="email" class="form-control" formControlName="email" />
+      </div>
+     
+      <div class="form-group">
+        <label for="specialite">Spécialité</label>
+        <input id="specialite" class="form-control" formControlName="specialite" />
+      </div>
+     
+      <button type="submit" class="btn btn-primary">Enregistrer</button>
+    </form>
+  </div>
+  

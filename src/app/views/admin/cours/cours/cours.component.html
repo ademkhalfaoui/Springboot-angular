@@ -1,0 +1,60 @@
+
+<!-- !PAGE CONTENT! -->
+
+
+  
+    
+       
+    
+        <!-- DataTales Example -->
+        <div class="card shadow mb-4">
+    
+            <div class="card-body">
+                <h1> Bienvenue🖐️🖐️ à l'Espace dédier pour consulter cours  👨‍🎓👩‍🎓</h1>
+               
+                <div class="table-responsive">
+                    <table  class="table table-striped"  width="50%">
+                        <thead>
+                            <tr>
+                              
+                                <th>id</th>
+                                <th>nom du formateur </th>
+                              <th>nom du cours </th>
+                                
+                                <th>Nom du fichier</th>
+
+                                <th>Action</th>
+                             
+                            </tr>
+                        </thead>
+                       
+                    <tbody >
+                        <tr *ngFor="let item of listcours" >
+                        <th>{{item.id}}</th>
+                        <th>{{item.utilisateur.nom +" "+ item.utilisateur.prenom }}</th>
+                        <th>{{item.code_cours}}</th>
+                           
+                            <th>{{item.nom_fichier}}</th>
+                        <td>
+                           
+                        <td> <button (click)="downloadfile(item.id,item.nom_fichier)" style="float: right;" class="btn btn-primary" >Télecharger fichier</button>
+                            <th><button href="/admin/download"  (click)="deleteCours(item.id)" style="float: right;" class="btn btn-primary" >
+                                <img src="https://static.vecteezy.com/system/resources/thumbnails/004/581/271/small/trash-can-icon-garbage-bin-with-lid-delete-symbol-illustration-free-vector.jpg" alt="Description de l'image" style="width: 40px; height: 40px; border-radius: 50%; border: none; padding: 0;"/>
+                                Supprimer</button></th>
+                        <td><button  class="btn btn-primary"  (click)="downloadPdf(item.id)" >
+                            <img src="https://cdn.iconscout.com/icon/premium/png-256-thumb/pdf-116-695377.png?f=webp" alt="Description de l'image" style="width: 40px; height: 40px; border-radius: 50%; border: none; padding: 0;"/>
+                            Voir le fichier
+                          </button></td>
+                    </tr>
+                 
+                       
+    
+                     
+                     
+                    </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    
+   

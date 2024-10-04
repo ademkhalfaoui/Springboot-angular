@@ -1,0 +1,71 @@
+
+<!-- Overlay effect when opening sidebar on small screens -->
+<div class="w3-overlay w3-hide-large" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
+
+<!-- !PAGE CONTENT! -->
+<div class="w3-main" style="margin-left:340px;margin-right:40px">
+
+  <!-- Header -->
+  <div class="w3-container" style="margin-top:80px" id="showcase">
+    <h1 class="w3-jumbo"><b>A propos de CNI</b></h1>
+    <h1 class="w3-xxxlarge w3-text-black"><b>Galerie.</b></h1>
+    <hr style="width:50px;border:5px solid gray" class="w3-round">
+  </div>
+  
+  <!-- Photo grid (modal) -->
+  <div class="w3-row-padding">
+    <div class="w3-half">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTea0ZYnj_W9lo8kPNIGUvmY_0SSsPd58RVkjZpILmmaw&s" style="width:100%"  alt="Concrete meets bricks">
+      <img src="https://www.atlasformation.fr/atlas/wp-content/uploads/2017/01/formation-de-formateur.jpg" style="width:100%" onclick="onClick(this)" alt="Light, white and tight scandinavian design">
+      
+    </div>
+
+    <div class="w3-half">
+    
+      <img src="https://www.jobboom.com/carriere/wp-content/uploads/2010/07/formateur.jpg"style="width:100%" alt="df">
+    </div>
+    <div class="w3-half">
+      <img src="https://adimpletionum.fr/wp-content/uploads/2021/01/formation-des-formateurs.png"style="width:100%" alt="df">
+    </div>
+  </div>
+
+  <!-- Modal for full size images on click-->
+  <div id="modal01" class="w3-modal w3-black" style="padding-top:0" onclick="this.style.display='none'">
+    <span class="w3-button w3-black w3-xxlarge w3-display-topright">&times;</span>
+    <div class="w3-modal-content w3-animate-zoom w3-center w3-transparent w3-padding-64">
+      <img id="img01" class="w3-image">
+      <p id="caption"></p>
+    </div>
+  </div>
+
+  <!-- Services -->
+  <div class="w3-container" id="services" style="margin-top:75px">
+    <h1 class="w3-xxxlarge w3-text-blue"><b>A Propos de CNI.</b></h1>
+    <hr style="width:50px;border:5px solid gray" class="w3-round">
+    <p>
+      Le Centre National d'Informatique de Tunis (CNIT) est une institution de premier plan en Tunisie, dédiée à la promotion de l'informatique et des technologies de l'information. Fondé pour répondre aux besoins croissants du pays en matière de développement numérique, le CNIT joue un rôle crucial dans la formation, la recherche et le développement dans le domaine de l'informatique. En collaboration avec les universités, les entreprises et les organismes gouvernementaux, le CNIT propose des programmes de formation avancée, des services de conseil et d'assistance technique, ainsi que des projets de recherche innovants visant à renforcer les capacités numériques de la Tunisie. En tant que centre d'excellence, le CNIT contribue activement à la transformation numérique du pays en favorisant l'innovation, la collaboration et l'adoption des meilleures pratiques en matière de technologie de l'information.
+    </p>
+  </div>
+  
+  <!-- Designers -->
+  <div class="w3-container" id="designers" style="margin-top:75px">
+    <h1 class="w3-xxxlarge w3-text-blue"><b>A propos de cette Application.</b></h1>
+    <hr style="width:50px;border:5px solid gray" class="w3-round">
+    
+    <p><b>Cette Application est dedié pour les enseignenets,et les étudiants (formateurs,Participant) du Centre National d'informatique 
+   a fin de consulter toutes les formations ,les formateurs et les Particiapnts qui sont inscrits dans un telle formation .
+     Finallement Cette application donne l'accés pour toutes les particpants de s'inscrire a distance. 
+    </b></p>
+
+    <div class="w3-container" id="services" style="margin-top:75px">
+      <h1 class="w3-xxxlarge w3-text-blue"><b>A Propos du Developpeur.</b></h1>
+      <hr style="width:50px;border:5px solid gray" class="w3-round">
+      <p><strong>Developpé par {{name}}{{lastname}}</strong> <br><br><svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="40" height="40" viewBox="0 0 50 50"><path d="M42,3H8C5.2,3,3,5.2,3,8v34c0,2.8,2.2,5,5,5h34c2.8,0,5-2.2,5-5V8C47,5.2,44.8,3,42,3z M37,19h-2c-2.1,0-3,0.5-3,2v3h5 l-1,5h-4v16h-5V29h-4v-5h4v-3c0-4,2-7,6-7c2.9,0,4,1,4,1V19z"></path> </svg><strong>{{Facebook}}</strong><br><br><svg xmlns="http://www.w3.org/2000/svg" width="1.33em" height="1em" viewBox="0 0 256 193"><path fill="#4285f4" d="M58.182 192.05V93.14L27.507 65.077L0 49.504v125.091c0 9.658 7.825 17.455 17.455 17.455z"/><path fill="#34a853" d="M197.818 192.05h40.727c9.659 0 17.455-7.826 17.455-17.455V49.505l-31.156 17.837l-27.026 25.798z"/><path fill="#ea4335" d="m58.182 93.14l-4.174-38.647l4.174-36.989L128 69.868l69.818-52.364l4.669 34.992l-4.669 40.644L128 145.504z"/><path fill="#fbbc04" d="M197.818 17.504V93.14L256 49.504V26.231c0-21.585-24.64-33.89-41.89-20.945z"/><path fill="#c5221f"  width="40" height="40" d="m0 49.504l26.759 20.07L58.182 93.14V17.504L41.89 5.286C24.61-7.66 0 4.646 0 26.23z"/></svg>   <strong>{{gmail}}</strong></p>
+      
+    </div>
+    
+  </div>
+
+  <footer class="w3-container w3-blue w3-center w3-padding">
+    <p>© 2024 Centre National d'informatique . Tous droits réservés.</p>
+</footer>

@@ -1,0 +1,58 @@
+<div class="w3-overlay w3-hide-large" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
+
+<!-- !PAGE CONTENT! -->
+    <div class="w3-main" style="margin-left:340px;margin-right:40px">
+     
+ <div class="container-fluid">
+    <div class="container">
+        <div class="d-flex justify-content-end mt-2">
+          <div class="me-2">
+            
+            <p>un formateur est Connecté ✅ </p>
+          </div>
+        </div>
+      </div>
+    
+    <!-- Page Heading -->
+    <h1>Espace Formateur 👨‍🏫👨🏢 </h1>
+
+    <div class="card shadow mb-4">
+   
+        <div class="card-body">
+          
+            
+            <div class="table-responsive">
+                <table class="table table-striped"  width="50%">
+                    <thead>
+                        <tr>
+                            <th>#</th>
+                            <th>nom du  cours</th>
+                            <th>code du cours</th>
+                            <th>théme de la  formation</th>
+                            <th>nom du formateur</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                  
+                    <tbody>
+                        <tr *ngFor="let item of dataArray">
+                            <td>{{item.id}}</td>
+                            <td>{{item.nom_cours}}</td>
+                            <td>{{item.code_cours}}</td>
+                            <td>{{item.theme_formation}}</td>
+                            <td>{{item.nom_formateur}}</td>                       
+                          <td> <input type="file" (change)="uploadFile($event)">
+                            <a href="/Formateur" style="float: right;" class="btn btn-primary">Envoyer</a>
+                          </td>
+                           
+                        </tr>
+                     
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+</div>
+<!-- /.container-fluid -->
+

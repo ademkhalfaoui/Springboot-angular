@@ -1,0 +1,56 @@
+ <!-- Begin Page Content -->
+ <div class="container-fluid">
+
+    <!-- Page Heading -->
+
+    <!-- DataTales Example -->
+    <div class="card shadow mb-4">
+    
+        <div class="card-body">
+            <h1>Voici Toute les Formations Disponibles</h1>
+            
+            <div class="table-responsive">
+                <table  class="table table-striped"  width="50%">
+                    
+                    <thead>
+                        
+                        <tr>
+                            
+                            <th>n°salle</th>
+                            <th>Oraganisation</th>
+                            <th>Mode de formation</th>
+                            <th>théme de formation</th>
+                            <th>lieu de formation</th>
+                            <th>Période</th>
+                            <th>Horaire</th>
+                         
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                  
+                    <tbody>
+                        
+                        <tr *ngFor="let item of dataArray">
+                            
+                            <td>{{item.num_salle}}</td>
+                            <td>{{item.Entreprise}}</td>
+                            <td>{{item.Mode_formation}}</td>
+                            <td>{{item.theme_formation}}</td>
+                            <td>{{item.Lieu_formation}}</td>                       
+                            <td>{{item.Periode}}</td>
+                            <td>{{item.Horaire}}</td>
+           
+                            <td><a href="/admin/allformations"  (click)="deleteFormation(item.num_action)" style="float: right;" class="btn btn-danger">Supprimer</a>
+                               <td> <a href="/admin/addformation" style="float: right;" class="btn btn-primary">Ajouter</a></td>
+                                <td><a (click)="go('/admin/updateformation/'+item.num_action)"  style="float: right;" class="btn btn-primary">Modifier</a></td>
+                        </tr>
+                    
+
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+</div>
+<!-- /.container-fluid -->

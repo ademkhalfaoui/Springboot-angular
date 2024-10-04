@@ -1,0 +1,13 @@
+export class FileInfo {
+  selectedFile: File;
+  nomCours: string;
+  nomFormateur: string;
+  codeCours: string;
+
+  constructor(selectedFile: File, nomCours: string, nomFormateur: string, codeCours: string) {
+    this.selectedFile = selectedFile;
+    this.nomCours = nomCours;
+    this.nomFormateur = nomFormateur;
+    this.codeCours = codeCours;
+  }
+}

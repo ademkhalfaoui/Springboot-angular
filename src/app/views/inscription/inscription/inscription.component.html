@@ -1,0 +1,141 @@
+<div class="w3-main" style="margin-left:340px;margin-right:40px; overflow-x: auto;">
+    <div class="card-body">
+      <div class="w3-container" id="contact" style="margin-top:75px">
+        <h1 class="w3-xxxlarge w3-text-blue"><b>Inscription</b></h1>
+        <hr style="width:50px;border:5px solid blue" class="w3-round">
+        
+        <form [formGroup]="utilisateurForm" (ngSubmit)="add()">
+          <div class="w3-section">
+            <label>Rôle</label>
+            <select class="w3-select w3-border" formControlName="role" required onchange="toggleArabicFields(this.value)">
+              <option value="">Sélectionner un rôle</option>
+              <option value="participant">Participant</option>
+              <option value="formateur">Formateur</option>
+            </select>
+            <div *ngIf="utilisateurForm.get('role')?.touched && utilisateurForm.get('role')?.invalid" class="text-danger">
+              Rôle est obligatoire.
+            </div>
+          </div>
+  
+          <div class="w3-section">
+            <label>الإسم</label>
+            <input class="w3-input w3-border" type="text" formControlName="nom_AR" required>
+         
+          </div>
+  
+          <div class="w3-section">
+            <label>اللقب</label>
+            <input class="w3-input w3-border" type="text" formControlName="prenom_AR" required>
+          
+          </div>
+  
+          <div class="w3-section">
+            <label>Nom</label>
+            <input class="w3-input w3-border" type="text" formControlName="nom" required>
+            <div *ngIf="utilisateurForm.get('nom')?.touched && utilisateurForm.get('nom')?.invalid" class="text-danger">
+              Nom est obligatoire.
+            </div>
+          </div>
+  
+          <div class="w3-section">
+            <label>Prénom</label>
+            <input class="w3-input w3-border" type="text" formControlName="prenom" required>
+            <div *ngIf="utilisateurForm.get('prenom')?.touched && utilisateurForm.get('prenom')?.invalid" class="text-danger">
+              Prénom est obligatoire.
+            </div>
+          </div>
+  
+          <div class="w3-section">
+            <label>Numéro de Cin</label>
+            <input class="w3-input w3-border" type="number" formControlName="num_cin" required>
+            <div *ngIf="utilisateurForm.get('num_cin')?.touched && utilisateurForm.get('num_cin')?.invalid" class="text-danger">
+              Numéro de CIN doit contenir 8 chiffres.
+            </div>
+          </div>
+  
+          <div class="w3-section">
+            <label>Email</label>
+            <input class="w3-input w3-border" type="email" formControlName="email" required>
+            <div *ngIf="utilisateurForm.get('email')?.touched && utilisateurForm.get('email')?.invalid" class="text-danger">
+              Email invalide.
+            </div>
+          </div>
+  
+          <div class="w3-section">
+            <label>Password</label>
+            <input class="w3-input w3-border" type="password" formControlName="password" required>
+            <div *ngIf="utilisateurForm.get('password')?.touched && utilisateurForm.get('password')?.invalid" class="text-danger">
+              Password doit avoir au moins 6 caractères.
+            </div>
+          </div>
+  
+          <div class="w3-section">
+            <label>Spécialité du formateur</label>
+            <input class="w3-input w3-border" type="text" formControlName="specialite" required>
+            <div *ngIf="utilisateurForm.get('specialite')?.touched && utilisateurForm.get('specialite')?.invalid" class="text-danger">
+              Spécialité est obligatoire.
+            </div>
+          </div>
+  
+          <div class="w3-section">
+            <label>Direction du formateur</label>
+            <input class="w3-input w3-border" type="text" formControlName="direction" required>
+            <div *ngIf="utilisateurForm.get('direction')?.touched && utilisateurForm.get('direction')?.invalid" class="text-danger">
+              Direction est obligatoire.
+            </div>
+          </div>
+  
+          <div class="form-group">
+            <label>Théme de la formation</label>
+            <select class="w3-select w3-border" formControlName="theme_formation" required>
+              <option value="">Sélectionner un théme</option>
+              <option value="Loi de finance">Loi de finance</option>
+              <option value="Gestion de Stock">Gestion de Stock</option>
+              <option value="adab">Adab</option>
+            </select>
+            <div *ngIf="utilisateurForm.get('theme_formation')?.touched && utilisateurForm.get('theme_formation')?.invalid" class="text-danger">
+              Thème de la formation est obligatoire.
+            </div>
+          </div>
+  
+          <div class="form-group">
+            <label>Période</label>
+            <select class="w3-select w3-border" formControlName="Periode" required>
+              <option value="">Choisir la date</option>
+              <option value="du : 15/03/2024 jusqu'à: 15/05/2024">du : 15/03/2024 jusqu'à: 15/05/2024</option>
+              <option value="du : 15/01/2024 jusqu'à: 15/03/2024">du : 15/01/2024 jusqu'à: 15/03/2024</option>
+            </select>
+            <div *ngIf="utilisateurForm.get('Periode')?.touched && utilisateurForm.get('Periode')?.invalid" class="text-danger">
+              Période est obligatoire.
+            </div>
+          </div>
+  
+          <div class="form-group">
+            <label>Horaire</label>
+            <select class="w3-select w3-border" formControlName="Horaire" required>
+              <option value="">Choisir l'heure</option>
+              <option value="du : 8:30 à 14:30">du : 8:30 à 14:30</option>
+              <option value="du : 15:00 à 18:00">du : 15:00 à 18:00</option>
+            </select>
+            <div *ngIf="utilisateurForm.get('Horaire')?.touched && utilisateurForm.get('Horaire')?.invalid" class="text-danger">
+              Horaire est obligatoire.
+            </div>
+          </div>
+  
+          <button class="w3-button w3-block w3-padding-large w3-blue w3-margin-bottom" type="submit">S'inscrire</button>
+        </form>
+      </div>
+    </div>
+  </div>
+  
+  <script>
+    function toggleArabicFields(value) {
+      var arabicFields = document.getElementById("arabicFields");
+      if (value === "participant") {
+        arabicFields.style.display = "block";
+      } else {
+        arabicFields.style.display = "none";
+      }
+    }
+  </script>
+  

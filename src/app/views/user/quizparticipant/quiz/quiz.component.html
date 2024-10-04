@@ -1,0 +1,30 @@
+<!-- quiz.component.html -->
+
+<!-- !PAGE CONTENT! -->
+<div class="w3-main" style="margin-left:340px;margin-right:40px; overflow-x: auto;">
+  
+    <div class="container-fluid">
+    
+     
+    
+        <!-- DataTales Example -->
+        <div class="card shadow mb-4">
+           
+            <div class="card-body">
+<div class="container">
+    <h1>Avis Participant</h1>
+    <form [formGroup]="quizForm" (ngSubmit)="submitQuiz()">
+      <div *ngFor="let question of questions; let i = index">
+        <h3>{{ question.questionText }}</h3>
+        <div class="form-group">
+          <input type="hidden" [value]="question.id"  [formControlName]="'question' + i">
+          <select type="text" class="form-control" [formControlName]="'response' + i">
+            <option value="">Selctionner votre reponse </option>
+            <option  *ngFor="let reponse of question.reponses"   [value]="reponse.id">{{reponse.reponseText}}</option>
+          </select>          <!-- Utilisez la syntaxe ['required'] pour accéder à la propriété 'required' -->
+          <div *ngIf="quizForm.get('response' + i)?.errors?.['required']" class="text-danger">Veuillez répondre à cette question.</div>
+        </div>
+      </div>
+      <button type="submit" class="btn btn-primary">Soumettre</button>
+    </form>
+</div>

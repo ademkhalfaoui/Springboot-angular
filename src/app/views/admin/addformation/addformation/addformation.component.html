@@ -1,0 +1,63 @@
+<!-- Dans votre fichier de template Angular -->
+<div class="container" style="font-family: Arial, sans-serif; display: flex; justify-content: center; align-items: center; height: 100vh;">
+  <fieldset style="max-width: 400px; padding: 20px; background-color: #fff; border-radius: 10px; box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);">
+    <legend style="font-size: 20px; font-weight: bold; color: #007bff; margin-bottom: 20px;">Formulaire</legend>
+    <form #f="ngForm" (ngSubmit)="add(f)">
+      <div class="form-group" style="margin-bottom: 20px;">
+        <label for="num_action" style="display: block; font-weight: bold;">Numéro de la salle :</label>
+        <input type="number" class="form-control" [(ngModel)]="formation.num_salle" name="num_salle" id="num_salle" style="width: calc(100% - 24px); padding: 10px; margin-top: 5px; border: 1px solid #ccc; border-radius: 5px; box-sizing: border-box;" required>
+      </div>
+      <div class="form-group" style="margin-bottom: 20px;">
+        <label for="num_action" style="display: block; font-weight: bold;">Numéro d'action :</label>
+        <input type="number" class="form-control" [(ngModel)]="formation.num_action" name="num_action" id="num_action" style="width: calc(100% - 24px); padding: 10px; margin-top: 5px; border: 1px solid #ccc; border-radius: 5px; box-sizing: border-box;" required>
+      </div>
+      <div class="form-group" style="margin-bottom: 20px;">
+        <label for="num_salle" style="display: block; font-weight: bold;">Numéro de la salle :</label>
+        <input type="number" class="form-control" [(ngModel)]="formation.num_salle" name="num_salle" id="num_salle" style="width: calc(100% - 24px); padding: 10px; margin-top: 5px; border: 1px solid #ccc; border-radius: 5px; box-sizing: border-box;" required>
+      </div>
+      <div class="form-group" style="margin-bottom: 20px;">
+        <label for="Entreprise" style="display: block; font-weight: bold;">L'organisation :</label>
+        <input type="text" class="form-control" [(ngModel)]="formation.Entreprise" name="Entreprise" id="Entreprise" style="width: calc(100% - 24px); padding: 10px; margin-top: 5px; border: 1px solid #ccc; border-radius: 5px; box-sizing: border-box;" required>
+      </div>
+      <div class="form-group" style="margin-bottom: 20px;">
+        <label for="theme_formation" style="display: block; font-weight: bold;">Thème de la Formation :</label>
+        <input type="text" class="form-control" [(ngModel)]="formation.theme_formation" name="theme_formation" id="theme_formation" style="width: calc(100% - 24px); padding: 10px; margin-top: 5px; border: 1px solid #ccc; border-radius: 5px; box-sizing: border-box;" required>
+      </div>
+      <div class="form-group" style="margin-bottom: 20px;">
+        <label for="Mode_formation" style="display: block; font-weight: bold;">Mode de la Formation :</label>
+        <input type="text" class="form-control" [(ngModel)]="formation.Mode_formation" name="Mode_formation" id="Mode_formation" style="width: calc(100% - 24px); padding: 10px; margin-top: 5px; border: 1px solid #ccc; border-radius: 5px; box-sizing: border-box;" required>
+      </div>
+      <div class="form-group" style="margin-bottom: 20px;">
+        <label for="Lieu_formation" style="display: block; font-weight: bold;">Lieu de la Formation :</label>
+        <input type="text" class="form-control" [(ngModel)]="formation.Lieu_formation" name="Lieu_formation" id="Lieu_formation" style="width: calc(100% - 24px); padding: 10px; margin-top: 5px; border: 1px solid #ccc; border-radius: 5px; box-sizing: border-box;" required>
+      </div>
+      <div class="form-group" style="margin-bottom: 20px;">
+        <label for="Gouvernorat" style="display: block; font-weight: bold;">Gouvernorat :</label>
+        <input type="text" class="form-control" [(ngModel)]="formation.Gouvernorat" name="Gouvernorat" id="Gouvernorat" style="width: calc(100% - 24px); padding: 10px; margin-top: 5px; border: 1px solid #ccc; border-radius: 5px; box-sizing: border-box;" required>
+      </div>
+      <div class="form-group" style="margin-bottom: 20px;">
+        <label for="Periode" style="display: block; font-weight: bold;">Période :</label>
+        <input type="text" class="form-control" [(ngModel)]="formation.Periode" name="Periode" id="Periode" style="width: calc(100% - 24px); padding: 10px; margin-top: 5px; border: 1px solid #ccc; border-radius: 5px; box-sizing: border-box;" required>
+      </div>
+      <div class="form-group" style="margin-bottom: 20px;">
+        <label for="Horaire" style="display: block; font-weight: bold;">Horaire :</label>
+        <input type="text" class="form-control" [(ngModel)]="formation.Horaire" name="Horaire" id="Horaire" style="width: calc(100% - 24px); padding: 10px; margin-top: 5px; border: 1px solid #ccc; border-radius: 5px; box-sizing: border-box;" required>
+      </div>
+      <div class="form-group" style="margin-bottom: 20px;">
+        <label for="Credit_Impot" style="display: block; font-weight: bold;">Crédit Impot :</label>
+        <input type="text" class="form-control" [(ngModel)]="formation.Credit_Impot" name="Credit_Impot" id="Credit_Impot" style="width: calc(100% - 24px); padding: 10px; margin-top: 5px; border: 1px solid #ccc; border-radius: 5px; box-sizing: border-box;" required>
+      </div>
+      <div class="form-group" style="margin-bottom: 20px;">
+        <label for="droit_tirage_collectif" style="display: block; font-weight: bold;">Droit de tirage collectif :</label>
+        <input type="text" class="form-control" [(ngModel)]="formation.droit_tirage_collectif" name="droit_tirage_collectif" id="droit_tirage_collectif" style="width: calc(100% - 24px); padding: 10px; margin-top: 5px; border: 1px solid #ccc; border-radius: 5px; box-sizing: border-box;" required>
+      </div>
+      <div class="form-group" style="margin-bottom: 20px;">
+        <label for="droit_tirage_individuel" style="display: block; font-weight: bold;">Droit de tirage individuel :</label>
+        <input type="text" class="form-control" [(ngModel)]="formation.droit_tirage_individuel" name="droit_tirage_individuel" id="droit_tirage_individuel" style="width: calc(100% - 24px); padding: 10px; margin-top: 5px; border: 1px solid #ccc; border-radius: 5px; box-sizing: border-box;" required>
+      </div>
+      <!-- Ajoutez les autres champs du formulaire de la même manière -->
+      
+      <button class="btn btn-primary" style="padding: 10px 20px; background-color: #007bff; color: #fff; border: none; border-radius: 5px; cursor: pointer; font-size: 16px;">Ajouter Formation</button>
+    </form>
+  </fieldset>
+</div>

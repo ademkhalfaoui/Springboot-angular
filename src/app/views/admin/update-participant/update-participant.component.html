@@ -1,0 +1,45 @@
+<div class="container">
+  <h2>Edit Participant</h2>
+  <form [formGroup]="participantForm" (ngSubmit)="onSubmit()">
+    <div class="form-group">
+      <label for="nom">Nom</label>
+      <input id="nom" class="form-control" formControlName="nom" />
+    </div>
+    <div class="form-group">
+      <label for="prenom">Prénom</label>
+      <input id="prenom" class="form-control" formControlName="prenom" />
+    </div>
+    <div class="form-group">
+      <label for="num_cin">Numéro de CIN</label>
+      <input id="num_cin" class="form-control" formControlName="num_cin" />
+    </div>
+    <div class="form-group">
+      <label for="email">Email</label>
+      <input id="email" class="form-control" formControlName="email" />
+    </div>
+    <div class="form-group">
+      <label for="nom_AR">Nom AR</label>
+      <input id="nom_AR" class="form-control" formControlName="nom_AR" />
+    </div>
+    <div class="form-group">
+      <label for="prenom_AR">Prénom AR</label>
+      <input id="prenom_AR" class="form-control" formControlName="prenom_AR" />
+    </div>
+    
+    
+    <div class="form-group">
+      <label for="theme_formation">Thème de formation</label>
+      <input id="theme_formation" class="form-control" formControlName="theme_formation" />
+    </div>
+    <div class="form-group">
+      <label for="horaire">Horaire</label>
+      <input id="horaire" class="form-control" formControlName="horaire" />
+    </div>
+    <div class="form-group">
+      <label for="periode">Période</label>
+      <input id="periode" class="form-control" formControlName="periode" />
+    </div>
+   
+    <button type="submit" class="btn btn-primary">Enregistrer</button>
+  </form>
+</div>
